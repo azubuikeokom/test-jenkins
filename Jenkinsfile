@@ -14,7 +14,7 @@ pipeline{
                         echo "Pushed from jenkins server" >> readme.md
                         git add readme.md
                         git commit -m "second commit"
-                        git push git@github.com:azubuikeokom/test-jenkins.git
+                        git push git@github.com:azubuikeokom/test-jenkins.git main
                     '''
                 }
              }
