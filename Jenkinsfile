@@ -11,7 +11,7 @@ pipeline{
              steps{
                 sshagent(credentials:['github_key']){
                     sh '''
-                        git checkout main
+                        git checkout origin/main
                         echo "Ths is for demo for Rowland" >> readme.md
                         git add readme.md
                         git commit -m "second commit"
