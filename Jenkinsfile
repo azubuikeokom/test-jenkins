@@ -11,7 +11,7 @@ pipeline{
              steps{
                 sshagent(credentials:['github_key']){
                     sh '''
-                        git branch
+                        git checkout main
                         echo "Pushed from jenkins server" >> readme.md
                         git add readme.md
                         git commit -m "second commit"
