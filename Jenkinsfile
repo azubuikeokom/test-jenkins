@@ -11,8 +11,10 @@ pipeline{
              steps{
                 sshagent(credentials:['github_key']){
                     sh '''
+                        git config pull.rebase false
                         git checkout main
-                        echo "Pushed from jenkins server" >> readme.md
+                        git pull
+                        echo "Ths is for demo for Rowland" >> readme.md
                         git add readme.md
                         git commit -m "second commit"
                         git push git@github.com:azubuikeokom/test-jenkins.git main
