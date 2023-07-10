@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Deploy'){
              steps{
-                sshagent(credentials:['github_key']){
+                sshagent(credentials:['github_key1']){
                     sh '''
                         git config pull.rebase false
                         git checkout main
