@@ -9,10 +9,10 @@ pipeline{
         }
         stage('Deploy'){
              steps{
-                sshagent(credentials:['github_key1']){
+                sshagent(credentials:['github_key']){
                     sh '''
                         git checkout main
-                        echo "Pushed from jenkins server" >> readme.md
+                        echo "Ths is for demo for Rowland" >> readme.md
                         git add readme.md
                         git commit -m "second commit"
                         git push git@github.com:azubuikeokom/test-jenkins.git main
