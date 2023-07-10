@@ -11,6 +11,7 @@ pipeline{
              steps{
                 sshagent(credentials:['github_key']){
                     sh '''
+                        git config pull.rebase false
                         git checkout main
                         git pull
                         echo "Ths is for demo for Rowland" >> readme.md
